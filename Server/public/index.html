@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AhnNote - 우리들의 러브노트</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@300;400;700&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="title-container">
+            <i class="fas fa-heart heart-icon"></i>
+            <h1>AhnNote</h1>
+            <i class="fas fa-heart heart-icon"></i>
+        </div>
+        
+        <!-- 노트 작성 폼 -->
+        <div class="note-form">
+            <h2><i class="fas fa-pencil-alt"></i> 새로운 메시지</h2>
+            <form id="noteForm">
+                <div class="form-group">
+                    <label for="title">제목:</label>
+                    <input type="text" id="title" name="title" required maxlength="50" placeholder="제목을 입력하세요...">
+                </div>
+                <div class="form-group">
+                    <label for="content">내용:</label>
+                    <textarea id="content" name="content" required placeholder="당신의 마음을 적어보세요..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="author">작성자:</label>
+                    <input type="text" id="author" name="author" required placeholder="이름을 입력하세요...">
+                </div>
+                <button type="submit"><i class="fas fa-paper-plane"></i> 마음 전하기</button>
+            </form>
+        </div>
+
+        <!-- 노트 목록 -->
+        <div class="notes-list">
+            <h2><i class="fas fa-envelope-open-heart"></i> 우리들의 이야기</h2>
+            <div id="notesList"></div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html> 
